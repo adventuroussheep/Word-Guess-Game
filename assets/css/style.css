@@ -1,0 +1,49 @@
+#wrapper {
+    background-image: url(../images/background.jpg), url(../images/backgroundbottom.jpg);
+    background-size: 100%;
+    background-position: 0px 100px;
+    border: 1px solid #338A2E;
+    background-repeat: no-repeat, repeat;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-columns: 5% auto auto 5%;
+}
+
+
+#header {
+    grid-area: 1/1/1/5;
+    border: 3px solid black;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    background: white;
+}
+
+#subheader {
+    grid-area: 2/2/2/4;
+    border: 2px solid black;
+    text-align: center;
+    background: white;
+}
+
+#leftdiv {
+    grid-area: 3/2/3/3;
+    border: 2px solid black;
+}
+
+#rightdiv {
+    grid-area: 3/3/3/3;
+    border: 2px solid black;
+}
+
+#footer{
+    grid-area: 4/1/4/5;
+    border: 2px solid black;
+    bottom: 0;
+    background-color: black;
+    position: sticky;
+}
+
+p {
+    color: white;
+}
