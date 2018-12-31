@@ -9,14 +9,10 @@
 
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="javascript" href="./assets/javascript/game.js">
         <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-        <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+        <script src="./assets/javascript/game.js" type="text/javascript"></script>
         
     </head>
 
@@ -27,24 +23,26 @@
         </div>
 
         <div id="subheader">
-            <h3>Empty until guessed</h3>
+            <h3 id="currentWord"></h3>
         </div>
 
         <div id="leftdiv">
-            <img>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusamus nostrum adipisci similique eaque, sunt id magni omnis facere quam commodi, sapiente cumque quidem corporis tempore consectetur iste aliquam aut.</p>
+            <img id="imageHolder" src="" alt="" height="200px" width="200px">
+            <p id="divText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusamus nostrum adipisci similique eaque, sunt id magni omnis facere quam commodi, sapiente cumque quidem corporis tempore consectetur iste aliquam aut.</p>
         </div>
 
         <div id="rightdiv">
-            <p>Press any key to start!</p>
-            <p>Current Word:</p>
-            <span>Word Space</span>
-            <p>Guesses Remaining:</p>
-            <span>Guess Space</span>
-            <p>Guessed:</p>
-            <span>Guess Text</span>
+            <p id="start">Press any key to start!</p>
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem eius obcaecati labore quidem iste voluptatem ab praesentium natus eligendi qui sit, alias incidunt laboriosam, enim quo omnis quia molestias facilis.</p>
+            <p>Guesses Remaining:</p>
+            <p id="remainingGuesses"></p>
+
+            <p>Guessed:</p>
+            <p id="guessedLetters"></p>
+
+            <p>Wins:</p>
+            <p id= "totalWins"></p>
+
         </div>
 
         <div id="footer">
@@ -52,6 +50,10 @@
         </div>
         </div>
 
+        <script>
+            resetGame();
+            
+        </script>
 
     </body>
 </html>
