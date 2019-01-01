@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Word Guess</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,18 +18,20 @@
 
     <body>
         <div id ="wrapper">
-        <div id="header">
-            <h1>Zen Word Guess</h1>
-        </div>
+            <div id ="rain"></div>
+            <div id="header">
+                <h1>Zen Word Guess</h1>
+            </div>
 
-        <div id="subheader">
-            <h3 id="currentWord"></h3>
-        </div>
+            <div id="subheader">
+                <h3 id="currentWord"></h3>
+            </div>
 
-        <div id="leftdiv">
-            <img id="imageHolder" src="" alt="" height="200px" width="200px">
-            <p id="divText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo accusamus nostrum adipisci similique eaque, sunt id magni omnis facere quam commodi, sapiente cumque quidem corporis tempore consectetur iste aliquam aut.</p>
-        </div>
+            <div id="leftdiv">
+                <h3 id ="leftDivHeader">Welcome!</h3>
+                <img id="imageHolder" src="" alt="" height="60%" width="60%">
+                <p id="divText">This game runs once any key between A-Z is pressed. There are 5 total words to guess from. If you run out of guesses your score will be reset to 0.</p>
+            </div>
 
         <div id="rightdiv">
             <p id="start">Press any key to start!</p>
@@ -51,7 +53,7 @@
         </div>
 
         <script>
-            resetGame();
+            startGame();
             
         </script>
 

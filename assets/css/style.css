@@ -6,12 +6,28 @@
     background-repeat: no-repeat, repeat;
     display: grid;
     grid-gap: 1em;
-    grid-template-rows: 100px 50px auto 100px;
-    grid-template-columns: 5% auto auto 5%;
-    transform: 
-    /* animation: animate 5s linear infinite; */
+    grid-template-rows: 100px 50px auto 75px;
+    grid-template-columns: 5% auto 30% 5%;
 }
 
+#rain {
+    opacity: 0;
+    background-image: url(../images/rain-clear.png);
+    animation: rain .9s linear infinite;
+    grid-area: 1/1/5/5;
+}
+
+
+@keyframes rain {
+    0%
+    { 
+        background-position: 0% 0%;
+    }
+    100%
+    {
+        background-position: 0% 750%;
+    }
+}
 
 #header {
     grid-area: 1/1/1/5;
@@ -34,12 +50,18 @@
     grid-area: 3/2/3/2;
     border: 2px solid black;
     background-color: rgb(31, 31, 31, 0.5);
+    text-align: center;
+}
+
+#leftDivHeader {
+    color: white;
 }
 
 #rightdiv {
     grid-area: 3/3/3/3;
     border: 2px solid black;
     background-color: rgb(31, 31, 31, 0.5);
+    text-align: center;
 }
 
 #footer{
@@ -48,6 +70,7 @@
     bottom: 0;
     background-color: black;
     position: sticky;
+    text-align: center;
 }
 
 p {
@@ -60,4 +83,5 @@ p {
 
 #imageHolder {
     border: 2px solid black;
+    position: relative;
 }
