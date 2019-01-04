@@ -11,10 +11,10 @@ var selectableWords = [
 const maxTries = 10;
 var remainingGuesses = 0;       
 var guessedLetters = [];       
-var guessingWord = [];         
-var currentWordIndex;           
+var randomWord = [];         
+var currentWordArray = [];           
 var wins = 0;                  
-var gameOver = false;    
+var gameOver = false; 
 
 
 // List of text prompts
@@ -30,47 +30,47 @@ let winText = "Nice Job! Press any key to try again.";
 function startGame() {
     remainingGuesses = maxTries;
     guessedLetters = [];
-    guessingWord = [];
+    randomWord = [];
     document.getElementById("imageHolder").src = "";
     
-    let currentWordIndex = Math.floor(Math.random() * (selectableWords.length));
+    let currentWordArray = Math.floor(Math.random() * (selectableWords.length));
     
     
-    for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-        guessingWord.push("_ ");
+    for (var i = 0; i < selectableWords[currentWordArray].length; i++) {
+        randomWord.push("_ ");
     };
 
 
 // Checks for winning conditions and prints to display
     function checkWin() {
     
-        if(guessingWord.indexOf("_ ") === -1) {
+        if(randomWord.indexOf("_ ") === -1) {
             wins++;
             gameOver = true;
             document.getElementById("currentWord").innerHTML = "<h3>Nice Job! Press any key to try again.</h3>";
             
-        }  if (currentWordIndex === 0 && guessingWord.indexOf("_ ") === -1){
+        }  if (currentWordArray === 0 && randomWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = breathe;
             document.getElementById("imageHolder").src = "./assets/images/breathe.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Breathe!";
 
-        } if (currentWordIndex === 1 && guessingWord.indexOf("_ ") === -1){
+        } if (currentWordArray === 1 && randomWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = relax;
             document.getElementById("imageHolder").src = "./assets/images/relax.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Relax!";
 
-        } if (currentWordIndex === 2 && guessingWord.indexOf("_ ") === -1){
+        } if (currentWordArray === 2 && randomWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = rain;
             document.getElementById("imageHolder").src = "./assets/images/rain.jpg";
             document.getElementById("rain").style.opacity = "1";
             document.getElementById("leftDivHeader").innerHTML = "Rain!";
 
-        } if (currentWordIndex === 3 && guessingWord.indexOf("_ ") === -1){
+        } if (currentWordArray === 3 && randomWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = calm;
             document.getElementById("imageHolder").src = "./assets/images/calm.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Calm";
 
-        } if (currentWordIndex === 4 && guessingWord.indexOf("_ ") === -1){
+        } if (currentWordArray === 4 && randomWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = sun;
             document.getElementById("imageHolder").src ="./assets/images/sun.jpg";
             document.getElementById("rain").style.opacity = "0.0";
@@ -108,14 +108,14 @@ function startGame() {
 // Updates different sections of the html
     function updateDisplay() {
 
-        var guessingWordText = "";
+        var randomWordText = "";
 
-        for (var i = 0; i < guessingWord.length; i++) {
-            guessingWordText += guessingWord[i];
+        for (var i = 0; i < randomWord.length; i++) {
+            randomWordText += randomWord[i];
         }
         
         document.getElementById("totalWins").innerText = wins;
-        document.getElementById("currentWord").innerText = guessingWordText;
+        document.getElementById("currentWord").innerText = randomWordText;
         document.getElementById("remainingGuesses").innerText = remainingGuesses;
         document.getElementById("guessedLetters").innerText = guessedLetters;
     };
@@ -127,8 +127,8 @@ function startGame() {
       
         var positions = [];
     
-        for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-            if(selectableWords[currentWordIndex][i] === letter) {
+        for (var i = 0; i < selectableWords[currentWordArray].length; i++) {
+            if(selectableWords[currentWordArray][i] === letter) {
                 positions.push(i);
             }
         }
@@ -138,7 +138,7 @@ function startGame() {
             remainingGuesses--;
         } else {
             for(var i = 0; i < positions.length; i++) {
-                guessingWord[positions[i]] = letter;
+                randomWord[positions[i]] = letter;
             }
         }
     };
