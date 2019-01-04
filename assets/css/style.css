@@ -6,7 +6,7 @@
     background-repeat: no-repeat, repeat;
     display: grid;
     grid-gap: 1em;
-    grid-template-rows: 75px 50px auto 75px;
+    grid-template-rows: 100px 50px auto 75px;
     grid-template-columns: 5% auto 30% 5%;
 }
 
@@ -52,6 +52,7 @@
     border: 2px solid black;
     background-color: rgb(31, 31, 31, 0.5);
     text-align: center;
+    min-height: 300px;
 }
 
 #leftDivHeader {
