@@ -17,7 +17,6 @@
     grid-area: 1/1/5/5;
 }
 
-
 @keyframes rain {
     0%
     { 
@@ -27,6 +26,7 @@
     {
         background-position: 0% 750%;
     }
+    
 }
 
 #header {

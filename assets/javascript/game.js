@@ -51,28 +51,28 @@ function startGame() {
             
         }  if (currentWordIndex === 0 && guessingWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = breathe;
-            document.getElementById("imageHolder").src = "../assets/images/breathe.jpg";
+            document.getElementById("imageHolder").src = "./assets/images/breathe.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Breathe!";
 
         } if (currentWordIndex === 1 && guessingWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = relax;
-            document.getElementById("imageHolder").src = "../assets/images/relax.jpg";
+            document.getElementById("imageHolder").src = "./assets/images/relax.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Relax!";
 
         } if (currentWordIndex === 2 && guessingWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = rain;
-            document.getElementById("imageHolder").src = "../assets/images/rain.jpg";
+            document.getElementById("imageHolder").src = "./assets/images/rain.jpg";
             document.getElementById("rain").style.opacity = "1";
             document.getElementById("leftDivHeader").innerHTML = "Rain!";
 
         } if (currentWordIndex === 3 && guessingWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = calm;
-            document.getElementById("imageHolder").src = "../assets/images/calm.jpg";
+            document.getElementById("imageHolder").src = "./assets/images/calm.jpg";
             document.getElementById("leftDivHeader").innerHTML = "Calm";
 
         } if (currentWordIndex === 4 && guessingWord.indexOf("_ ") === -1){
             document.getElementById("divText").innerText = sun;
-            document.getElementById("imageHolder").src ="../assets/images/sun.jpg";
+            document.getElementById("imageHolder").src ="./assets/images/sun.jpg";
             document.getElementById("rain").style.opacity = "0.0";
             document.getElementById("leftDivHeader").innerHTML = "Sun!";
         }
@@ -156,6 +156,4 @@ function startGame() {
     };
     
 };
-
-
 
