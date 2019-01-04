@@ -6,7 +6,7 @@
     background-repeat: no-repeat, repeat;
     display: grid;
     grid-gap: 1em;
-    grid-template-rows: 100px 50px auto 75px;
+    grid-template-rows: 75px 50px auto 75px;
     grid-template-columns: 5% auto 30% 5%;
 }
 
@@ -36,6 +36,7 @@
     text-align: center;
     background-color: white;
     font-size: 3;
+    line-height: 90px;
 }
 
 #subheader {
@@ -71,6 +72,7 @@
     background-color: black;
     position: sticky;
     text-align: center;
+    line-height: 120px;
 }
 
 p {
